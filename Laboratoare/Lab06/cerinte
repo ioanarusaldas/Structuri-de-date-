@@ -1,0 +1,6 @@
+Problema 1. Se dau două liste dublu înlănțuite circulare cu santinelă, ordonate crescător sau descrescător. Să se combine in-place (inserarea se va face în prima sau în cea de-a doua listă, fără a se crea o listă suplimentară) cele două liste. Lista rezultată trebuie să fie ordonată fie crescător, fie descrescător.
+
+Problema 2. Să se scrie o funcție care primește ca parametru o listă dublu înlănțuită circulară cu santinelă și elimină toate elementele din listă aflate pe poziții impare.
+
+Bonus. Să se scrie o funcție care sortează in-place (fără ajutorul vreunei alte liste suplimentare) o listă dublu înlănțuită circulară cu santinelă (crescător sau descrescător).
+

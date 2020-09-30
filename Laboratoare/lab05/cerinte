@@ -1,0 +1,14 @@
+1.	Să se scrie o funcție care să realizeze ștergerea elementelor din tabela h pentru care funcția de comparare întoarce 1 (adică valoarea „adevărat”). Funcția întoarce numărul de elemente care au fost șterse din tabelă.
+Semnătura funcției:
+	int delete (TH *h, TFCmp f)
+
+2.	Să se scrie o funcție care returnează adresa elementului pentru care funcția de comparare întoarce 1 (adică valoarea „adevărat”).
+Semnătura funcției:
+	void *get (TH *h, TFCmp f)
+
+BONUS:
+	Să se scrie o funcție care realizează copierea elementelor pentru care funcția f returnează 
+	1 (adică valoarea „adevărat”) într-o nouă tabelă hash care are funcția fh ca și funcție
+	Hash. Inserarea in fiecare lista se va face ordonat.
+	Semnătura funcției:
+

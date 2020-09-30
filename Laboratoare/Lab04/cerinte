@@ -1,0 +1,6 @@
+Problema 1. Sa se construiasca o lista simplu inlantuita cu elemente de tip TStudent, ordonata crescator dupa nume si descrescator dupa notaSD(in caz de egalitate a numelui). Valorile campurilor se vor citi de la tastatura.
+
+Problema 2. Sa se scrie o functie care primeste ca parametru o lista simplu inlantuita (construita la exercitiul 1) si construieste o noua lista prin mutarea elementelor pentru care notaSD <= 9 si           notaPC >= 9. Lista rezultat se va construi ordonata crescator dupa notaSD. Prin efect lateral se vor intoarce numarul de elemente din lista creata si numarul de elemente din lista initiala.
+
+Bonus: Sa se scrie o functie ca la problema 1 modificata astfel incat sa nu fie posibila inserarea duplicatelor si lista finala sa fie ordoneze descrescator dupa medie ((float)(notaSD + notaPC) / 2). Prin efect lateral se va intoarce numarul de duplicate din lista;
+
