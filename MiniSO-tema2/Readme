@@ -1,0 +1,93 @@
+Savu Ioana Rusalda 
+	315CB
+
+	In fisierul tema2.c am inclus partea de main a programului.
+	In fisierul coada_stiva am inclus functiile specifice cozilor si stivelor.
+	In fisierul functii.c am inclus functiile pentru rezolvarea cerintei.
+	In fisierul structuri.h am inclus structurile.
+	In fisierul listegenerice.c am inclus functiile specifice listelor generice.
+
+TEMA2.C
+
+	Prima data am verificat daca numarul de argumente din comanda corespund 
+cerintei si am afisat un mesaj de eroare in caz contrar.Apoi am deschis 
+fisierele de input si  de output,verificand daca operatia s-a realizat cu 
+succes.In caz contrar,am afisat mesaje de eroare.
+	Inainte de a incepe sa citesc din fisier am initializat cozile pentru: 
+procesele aflate in asteptare,procesele terminate si o coada cu toate procesele 
+adaugate in sistem.De asemenea,am construit un vector pe care l-am initializat
+cu 0 pe fiecare pozitie.Cu acesta retineam pidurile disponibile in sistem.
+	Astfel,daca pe o pozitie din vector se afla o valoare diferita de 0 insemna 
+ca PID-ul respectiv a fost folosit. Cand procesul se termina ,elementul din
+vector corespunzator PID-ului  sau este setat iar pe 0,fapt ce arata ca PID-ul 
+este disponibil.
+	Cand in fisier se intalneste sirul de caractere "add" functia citeste 
+parametrii corespunzatori unui proces si seteaza cu acestea campurile din 
+structura proces.Prin apelul functiei add procesul este adaugat in coada 
+de asteptare iar prin apelul functiei add2 ,procesul este adaugat si in coada 
+de procese. Tot aici am grija si ca primul proces sa fie trecut in running.
+Variabila runP retine procesul aflat in running.
+	Cand in fisier se intalneste "get",se citeste PID-ul si se verifica daca 
+procesul din running are PID-ul cautat.In caz contrar se cauta procesul in 
+coada de asteptare. Cand este gasit se afiseaza mesajul conform cerintei.
+	La citirea sirului de caractere "run" timpul de executie al procesului din 
+running scade ,si un nou proces este trecut in running.Totul se repeta pana cand
+se termina timpul de executie primit ca parametru.
+
+COADA_STIVA.C
+
+	Functia InitQ initializeaza coada ,fixand atat inceputul cat si sfarsitul 
+acesteia pe NULL.
+	Functia IntrQ introduce un element in coada. Prima data se aloca o celula 
+de lista generica cu informatia ce urmeaza sa fie adaugata in coada.Daca coada
+este vida(inceputul si sfarsitul sunt NULL),inceputul si sfarsitul vor puncta 
+catre celula creata.Daca coada nu e vida,celula este adaugata si sfarsitul cozii
+este actualizat.
+	Functia ExtrQ extrage elemente din coada. Prima data verific daca coada 
+este vida.Daca nu este,salvez intr-o variabila primul element din coada ,
+actualizez inceputul si eliberez informatia primului element cu ajutorul
+varaibilei.
+	Functia DistrQ extrage element cu element din coada si elibereaza 
+informatiile acestor elemente. 
+	Functia SizeQ parcurge coada si numara elementele din aceasta.
+Am folosit o coada auxiliara pentru a stoca elementele dupa ce sunt extrase rand
+pe rand din coada initiala. Din coada auxiliara procesul este reluat si 
+elementele sunt trecute la loc in coada originala.
+	Functia SortQ realizeaza sortarea dupa prioritate,timp de executie si PID.
+Procesul se realizeaza cu ajutorul functiilor de extragere si introducere 
+in coada.
+	Functia InitS este asemanatoare functiei InitQ si initializeaza o stiva.
+Atat baza cat si varful stivei sunt setate pe NULL(stiva vida).
+	Functia Push este asemanatoare functiei IntrQ si adauga elemente in stiva 
+pe acelasi principiu.
+	Functia Pop este asemanatoare functiei ExtrQ si extrage elemente din stiva .
+
+FUNCTII.C
+
+	Functia add introduce elemente in coada cu ajutorul functiei IntrQ si in 
+caz de succes afiseaza mesajul corespunzator cerintei.Functia add2 adauga 
+procese in coada cu toate procesele din sistem.
+	Functia Memorie returneaza sfarsitul zonei de memorie a unui proces 
+folosind functiile de extragere si introducere in coada ,dar si o oada 
+auxiliara.
+	Functia get cauta in coada  de asteptare procesul cu un anumit PID si daca 
+acesta este gasit il afiseaza conform cerintei.
+	Functia printW afiseaza conform cerintei procesele din coada de asteptare.
+	Functia printF afiseaza conform cerintei procesele din coada de procese
+terminate.
+	Functia PushS adauga elemente in stiva punui proces,conform parametrilor
+primiti in fisierul de intrare.
+	Functia printStack afiseaza conform cerintei stiva unui proces.
+	Functia PopS ,pe baza funtiei Pop ,extrage elemente din stiva conform 
+argumentelor primite in cerinta.
+
+LISTEGENERICE.C:	
+	Functia AlocCelulaG aloca o celula pentru lista generica ,in timp ce functia 
+InsLG insereaza informatia la sfarsit de lista.
+
+
+P.S: Nu imi trec mai multe teste fata de ce arata pe vmchecker dar mi se se blocheaza checker-ul la testul 5.
+
+
+
+
