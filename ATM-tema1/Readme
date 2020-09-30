@@ -1,0 +1,68 @@
+/*Savu Ioana Rusalda*/
+	/*315CB*/
+
+	In main este deschis atat fisierul de output cat si cel de input.
+Acestea sunt inchise la finalul programului.Dupa ce este citit numarul maxim
+de carduri se construieste lista LC.Lista se formeaza cu adaugare la inceput 
+de celule LC.
+
+	Urmatorul pas este citirea din fisier a operatiilor si apelarea 
+functiilor corespunzatoare.
+
+###############################################################################
+
+	Functia  poz calculeaza pozitia fiecarui card prin formula enuntata 
+in cerinta. Prima data cu ajutorul unui "while" se face suma cifrelor iar 
+ulterior aceasta este impartita la nrmax de carduri.
+
+###############################################################################
+
+	Functia valid_pin verifica daca PIN-ul contine si alte caractere in afara 
+de cifre.Daca PIN-ul contine doar cifre aceasta va returna 1 ,in caz contrar 
+va returna 0. Functia este apelata in functia de schimbare a PIN-ului.
+
+###############################################################################
+	Functia alocaLC aloca cate o celula din LC.Functia alocare card aloca un 
+card , iar alochistory o celula de tip history.Acestea sunt apelate in functiile 
+InsInc si  respectiv inshy ,care realizeaza inserarea la inceput a celulelor 
+alocate.
+
+###############################################################################
+	Functia showcard ,asemeni functiei show, parcurge lista LC iar apoi fiecare 
+sublista si sunt afisate toate informatiile despre cardurile din acea lista.
+
+###############################################################################
+
+	In functia add_card verifica daca exista in lista cardul ce urmeaza sa 
+fie adaugat iar in cazul in care acesta nu mai exista,face inserare la inceput a
+unei celule de timp card.
+
+################################################################################
+	
+	Functia delete_card primeste ca parametru numarul unui card si elimina 
+din lista  cardul corespunzator argumentului.
+
+###############################################################################
+
+	Functia insert_card verifica prima data statusul cardului introdus si 
+daca acesta este "LOCKED" afiseaza mesajul specific unui card blocat. Apoi 
+este verificat daca PIN-ul a fost introdus corect.De asemenea, numarul de 
+greseli de introducere a pinului este salvat in campul corespunzator din 
+structura  carrd.
+
+###############################################################################
+
+	In functia pin_change este verificat daca pinul corespunde criteriilor din
+enunt. In caz afirmativ pinu-ul este actualizat iar statusul devine ACTIV.
+
+###############################################################################
+	
+	In functia transfer_funds este verificat daca soldul cardului sursa este 	
+suficient pentru realizarea tranzactiei.
+Daca suma este multiplu de 10 si fondurile sunt suficiente are loc tranzactia.
+Cardului sursa i se scade valoarea sumei iar celui destinatie i se adauga 
+i se adauga suma. 
+
+###############################################################################
+
+Punctaj local : 99 puncte
