@@ -1,0 +1,45 @@
+Savu Ioana Rusalda 315CB
+
+	Structura de arbore contine un char in care se afla "/"daca este sfarsit de 
+cuvant care numeste un director,"*"daca este sfarsit de cuvant care numeste cun 
+fisier si "-" pt frunze si un vector de pointeri.
+
+In TEMA3.c:
+	Am deschis fisierele de intrare,iesire si eroare cu
+ajutorul functiei fopen.
+	Am apelat functiile specifice comenzilor linux
+conform citirii din fisier.
+	In variabila arbAux am retinut pozitia in arbore iar
+in variabila cale am retinut calea catre diretorul curent.
+
+In FUNCTII.c
+	Functia de alocare aloca un vector,corespunzator
+caracterelor ce se pot regasi in numele unui director,fiecare camp fiind 
+setat pe NULL.
+	In functia insert este sunt alocati vectorii corespunzatori caracterelor 
+primite ca parametru.In campul tip din structura se va pune '/'daca este sfarsit
+de cuvant si '-' altfel.
+	In functia distruge este distrus recursiv fiecare vector.
+	In functia Cauta se cauta un anumit sir de caractere in arbore.Daca sirul
+ este gasit functia returneaza 1,daca nu functia returneaza 0.
+ 	In functia pwd este parcurs fiecare copil din arbore si indicele ii este 
+ transformat in caracter si apoi afisat.
+ 	In functia verificare se verifica daca sirul de caractere contine doar 
+caracterele specificate in cerinta.
+	Functia Cauta2 este asemanatoare functiei CAuta ,doar ca aceasta returneaza 
+un pointer la pozitia unde se termna cuvantul cautat.
+	Functia caracter transforma un numar intreg in caracter ,conform codului 
+ascii.
+
+In COMENZI.c 
+	Functia mkdir desparte sirul de caractere dupa spatiu cu ajutorul 
+functiei strtok. Daca sirul de caractere uncepe cu '/',acest / este eliminat 
+din sir. Se apeleaza apoi functia de inserare. Daca inserarea nu reuseste se 
+afiseaza un mesaj de eroare.
+	Functia cdPunct este apelata in cazul cd.. ,in care trebuie sa ne intoarcem
+inapoi cu un director. Daca nu suntem deja in /(daca calea este diferita de /),
+operatia se poate realiza.Astfel este actualizata calea si cu ajutorul functiei 
+cauta ne pozitionam cu un director in urma.
+	Funnctia cd este folosita in restul cazurilor,cand nu apare "..". Daca sirul 
+de caractere contine / atunci acesta este impartit dupa / si se apeleaza functia
+de cautare pentru fiecare subsir.
